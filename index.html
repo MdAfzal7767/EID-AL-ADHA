@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Amiri:wght@700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { overflow-x: hidden; width: 100%; }
 
@@ -282,37 +283,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
-    max-width: 580px;
+    width: 78%;
+    max-width: 500px;
 }
 
-/* CHHOTA BOX - TOP */
 .top-blue-box {
     width: 100%;
-    height: clamp(55px, 9vw, 85px);
+    height: clamp(50px, 8vw, 75px);
     background: linear-gradient(145deg, #42a5f5, #4ee955, #a75ed7, #a4801d, #0f84dd);
-    border-radius: 25px 25px 0 0;
+    border-radius: 20px 20px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: clamp(1.3rem, 4.5vw, 3rem);
-    border: 5px solid #ff0000;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    border: 4px solid #ff0000;
     border-bottom: none;
     animation: topBorderRainbow 5s linear infinite;
 }
 
-/* CHHOTA BOX - MAIN */
 .eid-main-box {
     position: relative;
     width: 100%;
     background: linear-gradient(145deg, #42a5f5, #4ee955, #a75ed7, #a4801d, #0f84dd);
-    border-radius: 0 0 35px 35px;
-    padding: 20px 10px 70px 10px;
+    border-radius: 0 0 30px 30px;
+    padding: 18px 8px 60px 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 5px solid #ff9800;
+    border: 4px solid #ff9800;
     border-top: none;
     animation: borderRainbow 5s linear infinite;
 }
@@ -348,12 +347,11 @@ body {
     filter: drop-shadow(0 0 50px rgb(0, 255, 128));
 }
 
-/* CHHOTA HEADING */
 .eid-heading {
     font-family: 'Amiri', serif;
-    font-size: clamp(1.4rem, 5.5vw, 3.5rem);
+    font-size: clamp(1.2rem, 5vw, 3rem);
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 25px;
     line-height: 1.1;
     animation: colorChange 4s infinite, headingFloat 3s ease-in-out infinite;
     text-shadow: 0 3px 0 #e65100, 0 7px 5px rgba(0,0,0,.4);
@@ -373,17 +371,16 @@ body {
     100% { color: #8505cf; }
 }
 
-/* CHHOTE ANIMALS */
 .animals-container {
     display: flex;
     justify-content: center;
-    gap: clamp(8px, 2.5vw, 30px);
-    margin: 15px 0;
+    gap: clamp(6px, 2vw, 25px);
+    margin: 12px 0;
     flex-wrap: wrap;
 }
 
 .animal {
-    font-size: clamp(1.3rem, 5.5vw, 2.5rem);
+    font-size: clamp(1.2rem, 5vw, 2.2rem);
     filter: drop-shadow(0 6px 15px rgba(0,0,0,0.65));
     animation: animalBounce 2.5s ease-in-out infinite;
 }
@@ -393,21 +390,20 @@ body {
     50% { transform: translateY(-10px) scale(1.35) rotate(5deg); }
 }
 
-/* CHHOTA TEXT */
 .eid-message {
-    font-size: clamp(0.7rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.65rem, 2.3vw, 1.1rem);
     line-height: 1.5;
     font-weight: 900;
-    margin: 10px 0;
+    margin: 8px 0;
     animation: messageColorFloat 3s ease-in-out infinite;
     text-shadow: 0 2px 0 #fff, 0 5px 7px rgba(0,0,0,0.55);
     padding: 0 6px;
 }
 
 .eid-footer {
-    font-size: clamp(0.8rem, 3.2vw, 1.5rem);
+    font-size: clamp(0.75rem, 3vw, 1.3rem);
     font-weight: 900;
-    margin: 8px 0 50px 0;
+    margin: 6px 0 45px 0;
     animation: messageColorFloat 3s ease-in-out infinite 1.5s;
     text-shadow: 0 3px 0 #fff, 0 6px 8px rgba(0,0,0,0.6);
 }
@@ -418,13 +414,12 @@ body {
     100% { color: #0d47a1; transform: translateY(0px); }
 }
 
-/* CHHOTE BUTTONS */
 .back-btn, .NAME-btn {
     position: absolute;
-    bottom: 10px;
-    padding: clamp(6px, 2vw, 10px) clamp(10px, 3vw, 18px);
+    bottom: 8px;
+    padding: clamp(5px, 1.8vw, 8px) clamp(8px, 2.5vw, 15px);
     font-weight: 900;
-    font-size: clamp(0.65rem, 2.3vw, 0.85rem);
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
@@ -683,6 +678,7 @@ body {
     pointer-events: none;
 }
 
+/* ========== MOBILE RESPONSIVE - TIGHT FIT ========== */
 @media (max-width: 600px) {
     .social-container {
         grid-template-columns: repeat(2, 1fr);
@@ -693,14 +689,75 @@ body {
         text-align: center;
     }
     
+    /* MOBILE ME EID BOX TIGHT FIT */
+    .eid-stack-container {
+        width: 88% !important;
+        max-width: 400px !important;
+        margin: 0 auto;
+    }
+    
+    .top-blue-box {
+        height: clamp(42px, 6.5vw, 60px) !important;
+        font-size: clamp(1rem, 3.2vw, 1.8rem) !important;
+        border: 3px solid #ff0000 !important;
+    }
+    
+    .eid-main-box {
+        padding: 15px 6px 12px 6px !important; /* Upar-niche ka space kam */
+        border: 3px solid #ff9800 !important;
+        border-top: none !important;
+        border-radius: 0 0 25px 25px !important;
+    }
+    
+    .moon-icon {
+        font-size: clamp(1.3rem, 4.5vw, 2.2rem) !important;
+        top: 3px !important;
+    }
+    
+    .eid-heading {
+        font-size: clamp(1rem, 4vw, 2.2rem) !important;
+        margin-top: 20px !important; /* Upar ka gap kam */
+        margin-bottom: 10px !important;
+    }
+    
+    .animals-container {
+        gap: clamp(5px, 1.8vw, 20px) !important;
+        margin: 10px 0 !important;
+    }
+    
+    .animal {
+        font-size: clamp(1rem, 4.2vw, 1.9rem) !important;
+    }
+    
+    .eid-message {
+        font-size: clamp(0.55rem, 1.8vw, 0.9rem) !important;
+        line-height: 1.4 !important;
+        margin: 6px 0 !important;
+        padding: 0 4px !important;
+    }
+    
+    .eid-footer {
+        font-size: clamp(0.65rem, 2.5vw, 1.1rem) !important;
+        margin: 5px 0 8px 0 !important; /* Niche ka space khatam */
+        padding-bottom: 0 !important;
+    }
+    
+    /* BUTTONS EID BOX KE ANDAR HI CHIPKE HUE */
     .back-btn, .NAME-btn {
         position: relative !important;
-        margin: 8px 4px !important;
         display: inline-block !important;
+        margin: 8px 3px 0 3px !important;
         bottom: auto !important;
         left: auto !important;
         right: auto !important;
-        width: 47% !important;
+        width: 48% !important;
+        padding: clamp(5px, 1.6vw, 7px) clamp(6px, 2vw, 12px) !important;
+        font-size: clamp(0.55rem, 1.8vw, 0.75rem) !important;
+        border-radius: 15px !important;
+    }
+    
+    #salamPage {
+        padding: 5px !important; /* Page ka padding bhi kam */
     }
 }
 </style>
