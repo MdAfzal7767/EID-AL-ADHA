@@ -1042,62 +1042,53 @@ body {
 }
 
 
+/* DESKTOP - waisa hi rahega */
 .CREATE-Bte {
     background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
     color: #122ba6;
     font-weight: 900;
-    font-size: clamp(0.75rem, 3.5vw, 0.85rem); /* Mobile pe auto chota */
-    padding: clamp(10px, 2.5vw, 12px) clamp(18px, 5vw, 24px); /* Responsive padding */
-    border: clamp(3px, 1vw, 5px) solid #8bc378; /* Border bhi responsive */
+    font-size: 0.85rem;
+    padding: 12px 24px;
+    border: 5px solid #8bc378;
     border-radius: 30px;
-    box-shadow: 0 6px 20px rgba(96, 229, 202, 0.6);
+    box-shadow: 0 8px 25px rgba(96, 229, 202, 0.6);
     cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: 3%;
-    margin-top: -40px; /* Desktop ke liye */
+    margin-top: -50px;
     text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
-    
-    /* Position + Animation fix */
     --base-y: 40px;
     transform: translateY(var(--base-y));
     animation: uparNicheHilna 2s ease-in-out infinite;
-    width: auto;
-    max-width: 90%;
 }
 
-/* Hindi animation - base position ke saath */
-@keyframes uparNicheHilna {
-    0%, 100% { transform: translateY(var(--base-y)); }
-    50% { transform: translateY(calc(var(--base-y) - 6px)); } /* Sirf 6px hilega */
-}
-
-/* MOBILE SPECIFIC FIX */
+/* MOBILE FIX - Screenshot jaisa overlap hatane ke liye */
 @media (max-width: 600px) {
     .CREATE-Bte {
-        margin-top: -25px; /* Mobile pe kam upar */
-        margin-right: 5%; /* Thoda andar */
-        --base-y: 20px; /* Mobile pe kam shift */
-        font-size: 0.8rem;
-        padding: 10px 20px;
-        border: 3px solid #8bc378;
+        font-size: 0.7rem; /* Chhota font */
+        padding: 8px 16px; /* Chhota padding */
+        border: 3px solid #8bc378; /* Patla border */
+        margin-top: -20px; /* Kam upar */
+        margin-right: 8%; /* Right me halka shift */
+        --base-y: 15px; /* Kam niche shift */
+        max-width: 55%; /* Zyada lamba na ho */
         box-shadow: 0 4px 15px rgba(96, 229, 202, 0.5);
-        max-width: 85%;
     }
     
     @keyframes uparNicheHilna {
         0%, 100% { transform: translateY(var(--base-y)); }
-        50% { transform: translateY(calc(var(--base-y) - 4px)); } /* Mobile pe sirf 4px hilega */
+        50% { transform: translateY(calc(var(--base-y) - 3px)); } /* Sirf 3px hilega */
     }
 }
 
-/* Extra small screens */
-@media (max-width: 380px) {
+/* Bahut chhoti screen 360px se kam */
+@media (max-width: 360px) {
     .CREATE-Bte {
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
+        font-size: 0.65rem;
+        padding: 7px 14px;
+        margin-right: 5%;
+        max-width: 50%;
     }
 }
 
