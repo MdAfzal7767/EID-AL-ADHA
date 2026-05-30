@@ -1046,37 +1046,59 @@ body {
     background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
     color: #122ba6;
     font-weight: 900;
-    font-size: 0.85rem;
-    padding: 12px 24px;
-    
-    border: 5px solid #8bc378;
+    font-size: clamp(0.75rem, 3.5vw, 0.85rem); /* Mobile pe auto chota */
+    padding: clamp(10px, 2.5vw, 12px) clamp(18px, 5vw, 24px); /* Responsive padding */
+    border: clamp(3px, 1vw, 5px) solid #8bc378; /* Border bhi responsive */
     border-radius: 30px;
-    
-    box-shadow: 0 8px 25px rgba(96, 229, 202, 0.6);
+    box-shadow: 0 6px 20px rgba(96, 229, 202, 0.6);
     cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: 3%;
-    margin-top: 0;
+    margin-top: -40px; /* Desktop ke liye */
     text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
     
-    /* Bas niche shift - koi hilna dhulna nahi */
-    margin-top: -50px;
-    transform: translateY(40px);
-
-    /* Hindi wala function add kiya */
+    /* Position + Animation fix */
+    --base-y: 40px;
+    transform: translateY(var(--base-y));
     animation: uparNicheHilna 2s ease-in-out infinite;
+    width: auto;
+    max-width: 90%;
 }
 
-@keyframes floatBox {
-    0%, 100% { transform: translateY(50px); } /* Gap kam karne ke liye 40px se 20px */
-    50% { transform: translateY(12px); } /* 20px - 8px */
-}
-
-/* Hindi naam ka naya animation function */
+/* Hindi animation - base position ke saath */
 @keyframes uparNicheHilna {
-    0%, 100% { transform: translateY(40px); }
-    50% { transform: translateY(32px); }
+    0%, 100% { transform: translateY(var(--base-y)); }
+    50% { transform: translateY(calc(var(--base-y) - 6px)); } /* Sirf 6px hilega */
+}
+
+/* MOBILE SPECIFIC FIX */
+@media (max-width: 600px) {
+    .CREATE-Bte {
+        margin-top: -25px; /* Mobile pe kam upar */
+        margin-right: 5%; /* Thoda andar */
+        --base-y: 20px; /* Mobile pe kam shift */
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        border: 3px solid #8bc378;
+        box-shadow: 0 4px 15px rgba(96, 229, 202, 0.5);
+        max-width: 85%;
+    }
+    
+    @keyframes uparNicheHilna {
+        0%, 100% { transform: translateY(var(--base-y)); }
+        50% { transform: translateY(calc(var(--base-y) - 4px)); } /* Mobile pe sirf 4px hilega */
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+    .CREATE-Bte {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
 }
 
 </style>
