@@ -152,8 +152,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: letterRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-               gradientFlow 14s linear infinite;
+    /* animation: letterRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+               gradientFlow 14s linear infinite; */
+      animation: 
+        letterRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+        gradientFlow 14s linear infinite,
+        premiumWave 4s ease-in-out infinite;
 }
 
 @keyframes letterRight {
@@ -198,6 +202,7 @@ body {
 .animated-heading .line:nth-child(2) span:nth-child(12) { animation-delay: 8.1s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(13) { animation-delay: 8.4s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(14) { animation-delay: 8.7s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(15) { animation-delay: 8.7s, 0s; }
 
 /* Line 3: Wabarakatuh */
 .animated-heading .line:nth-child(3) span:nth-child(1) { animation-delay: 9.0s, 0s; }
@@ -322,7 +327,7 @@ body {
     animation: glowing 15s linear infinite;
 }
 
-.greeting-btn::after {
+/* .greeting-btn::after {
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -330,7 +335,7 @@ body {
     background: rgba(255,255,255,0.95);
     border-radius: 15px;
     z-index: 2;
-}
+} */
 
 .greeting-btn:hover {
     transform: scale(1.1) translateY(-5px);
@@ -423,9 +428,9 @@ body {
 
 .eid-heading {
     font-family: 'Amiri', serif;
-    font-size: clamp(1.2rem, 5vw, 3rem);
+    font-size: clamp(.87rem, 2vw, 2.5rem);
     font-weight: 700;
-    margin-top: 25px;
+    margin-top: 50px;
     line-height: 1.1;
     animation: colorChange 4s infinite, headingFloat 3s ease-in-out infinite;
     text-shadow: 0 3px 0 #e65100, 0 7px 5px rgba(0,0,0,.4);
@@ -448,8 +453,8 @@ body {
 .animals-container {
     display: flex;
     justify-content: center;
-    gap: clamp(6px, 2vw, 25px);
-    margin: 12px 0;
+    gap: clamp(7px, 5vw, 35px);
+    margin: 20px 0;
     flex-wrap: wrap;
 }
 
@@ -465,32 +470,33 @@ body {
 }
 
 .eid-message {
-    font-size: clamp(0.65rem, 2.3vw, 1.1rem);
+    font-size: clamp(1rem, 1vw, 0.57rem);
     line-height: 1.5;
     font-weight: 900;
-    margin: 8px 0;
+    margin: 5px;
     animation: messageColorFloat 3s ease-in-out infinite;
-    text-shadow: 0 5px 0 #fff, 0 5px 7px rgba(0,0,0,0.55);
+    text-shadow: 0 3px 0 #ffffff, 0 5px 7px rgba(0,0,0,0.55);
     padding: 0 6px;
 }
 
 .eid-footer {
     font-size: clamp(0.75rem, 3vw, 1.3rem);
     font-weight: 900;
-    margin: 6px 0 45px 0;
+    margin: 10px 0 30px 0;
     animation: messageColorFloat 3s ease-in-out infinite 1.5s;
     text-shadow: 0 3px 0 #fff, 0 6px 8px rgba(0,0,0,0.6);
 }
 
 @keyframes messageColorFloat {
-    0% { color: #0d47a1; transform: translateY(0px); }
-    50% { color: #b71c1c; transform: translateY(-4px); }
-    100% { color: #0d47a1; transform: translateY(0px); }
+    0% { color: #0d3702; transform: translateY(0px); }
+    50% { color: #431901; transform: translateY(-4px); }
+    100% { color: #011b41; transform: translateY(0px); }
 }
 
 .back-btn, .NAME-btn {
     position: absolute;
-    bottom: 8px;
+    margin-top: -15px;
+    bottom: 20px;
     padding: clamp(5px, 1.8vw, 8px) clamp(8px, 2.5vw, 15px);
     font-weight: 900;
     font-size: clamp(0.6rem, 2vw, 0.8rem);
@@ -500,19 +506,20 @@ body {
 }
 
 .back-btn {
-    left: 3%;
-    background: rgba(255,193,7,0.5);
+    left: 6%;
+    font-size: 1.2rem;
+    background: rgba(124, 221, 143, 0.5);
     color: #000;
-    border: 5px solid #FFD700;
+    border: 5px solid #9bd47a;
 }
 
 .back-btn:hover {
-    background: #FFD700;
-    box-shadow: 0 0 75px rgba(255,215,0,1);
+    background: #039412;
+    box-shadow: 0 0 75px rgb(45, 45, 43);
     transform: scale(1.15);
 }
 
-.NAME-btn {
+/* .NAM-btn {
     right: 3%;
     background: linear-gradient(135deg, #FFD700 0%, #FF6B00 25%, #FFD700 50%, #FFA500 75%, #FFD700 100%);
     background-size: 300% 100%;
@@ -521,7 +528,7 @@ body {
     border-radius: 50px;
     box-shadow: 0 8px 35px rgba(255, 215, 0, 0.6);
     animation: liquidGold 4s linear infinite, floatUp 3s ease-in-out infinite;
-}
+} */
 
 @keyframes liquidGold {
     0% { background-position: 0% 0; }
@@ -1033,6 +1040,45 @@ body {
     color: #00d4ff;
     font-weight: 800;
 }
+
+
+.CREATE-Bte {
+    background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
+    color: #122ba6;
+    font-weight: 900;
+    font-size: 0.85rem;
+    padding: 12px 24px;
+    
+    border: 5px solid #8bc378;
+    border-radius: 30px;
+    
+    box-shadow: 0 8px 25px rgba(96, 229, 202, 0.6);
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 3%;
+    margin-top: 0;
+    text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
+    
+    /* Bas niche shift - koi hilna dhulna nahi */
+    margin-top: -50px;
+    transform: translateY(40px);
+
+    /* Hindi wala function add kiya */
+    animation: uparNicheHilna 2s ease-in-out infinite;
+}
+
+@keyframes floatBox {
+    0%, 100% { transform: translateY(50px); } /* Gap kam karne ke liye 40px se 20px */
+    50% { transform: translateY(12px); } /* 20px - 8px */
+}
+
+/* Hindi naam ka naya animation function */
+@keyframes uparNicheHilna {
+    0%, 100% { transform: translateY(40px); }
+    50% { transform: translateY(32px); }
+}
+
 </style>
 </head>
 <body>
@@ -1092,7 +1138,7 @@ body {
                 Wishing you and your family<br>
                 a beautiful and joyful Eid! 🤍🕊️
             </p>
-            <button class="NAME-btn" id="afzalBtn">CREATE BY: MD AFZAL</button>
+            <button class="CREATE-Bte" id="afzalBtn">CREATE BY: MD AFZAL</button>
             <button class="back-btn" id="backBtn">← Back</button>
         </div>
     </div>
