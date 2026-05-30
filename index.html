@@ -26,12 +26,13 @@ body {
     z-index: 1;
 }
 
+/* EID MUBARAK BUTTON */
 .mode-box {
-    position: fixed;
-    top: 200px;
-    right: 200px;
-    padding: 8px 15px;
-    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    position: fixed !important;
+    top: 200px !important;
+    right: 250px !important;
+    padding: 12px 17px;
+    background: linear-gradient(145deg, #0a9e0f, #6d048d);
     color: #00ff88;
     border: 2px solid #00ff88;
     border-radius: 10px;
@@ -40,8 +41,26 @@ body {
     letter-spacing: 1px;
     box-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
     z-index: 9999;
+    cursor: pointer !important;
+    transition: 0.3s ease;
 }
 
+
+.mode-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(0, 255, 136, 1);
+}
+
+@media (max-width: 600px) {
+    .mode-box {
+        top: 140px !important;   /* 30px se 140px */
+        left: 12px !important;   /* left side */
+        right: auto !important;
+        padding: 6px 12px !important;
+    }
+
+}   
+    
 .falling-moon, .falling-star, .rising-snow, .bg-star {
     position: absolute;
     pointer-events: none;
@@ -112,13 +131,14 @@ body {
     font-weight: 900;
     text-align: center;
     margin-top: 30vh;
+    margin-bottom: 0vh;
     z-index: 200;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
 }
 
 .animated-heading .line { 
     display: block; 
-    margin-bottom: 10px; 
+    margin-bottom: -2px; 
     font-size: 0;
 }
 
@@ -146,11 +166,66 @@ body {
     100% { background-position: 300% 50%; }
 }
 
+/* Line 1: Assalamualaikum */
+.animated-heading .line:nth-child(1) span:nth-child(1) { animation-delay: 0.3s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(2) { animation-delay: 0.6s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(3) { animation-delay: 0.9s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(4) { animation-delay: 1.2s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(5) { animation-delay: 1.5s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(6) { animation-delay: 1.8s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(7) { animation-delay: 2.1s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(8) { animation-delay: 2.4s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(9) { animation-delay: 2.7s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(10) { animation-delay: 3.0s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(11) { animation-delay: 3.3s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(12) { animation-delay: 3.6s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(13) { animation-delay: 3.9s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(14) { animation-delay: 4.2s, 0s; }
+.animated-heading .line:nth-child(1) span:nth-child(15) { animation-delay: 4.5s, 0s; }
+
+/* Line 2: Warahmatullahi */
+.animated-heading .line:nth-child(2) span:nth-child(1) { animation-delay: 4.8s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(2) { animation-delay: 5.1s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(3) { animation-delay: 5.4s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(4) { animation-delay: 5.7s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(5) { animation-delay: 6.0s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(6) { animation-delay: 6.3s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(7) { animation-delay: 6.6s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(8) { animation-delay: 6.9s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(9) { animation-delay: 7.2s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(10) { animation-delay: 7.5s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(11) { animation-delay: 7.8s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(12) { animation-delay: 8.1s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(13) { animation-delay: 8.4s, 0s; }
+.animated-heading .line:nth-child(2) span:nth-child(14) { animation-delay: 8.7s, 0s; }
+
+/* Line 3: Wabarakatuh */
+.animated-heading .line:nth-child(3) span:nth-child(1) { animation-delay: 9.0s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(2) { animation-delay: 9.3s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(3) { animation-delay: 9.6s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(4) { animation-delay: 9.9s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(5) { animation-delay: 10.2s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(6) { animation-delay: 10.5s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(7) { animation-delay: 10.8s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(8) { animation-delay: 11.1s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(9) { animation-delay: 11.4s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(10) { animation-delay: 11.7s, 0s; }
+.animated-heading .line:nth-child(3) span:nth-child(11) { animation-delay: 12.0s, 0s; }
+
+/* Urdu - English khatam hone ke baad */
+.word:nth-child(1) { animation-delay: 12.6s, 0s; }
+.word:nth-child(2) { animation-delay: 13.2s, 0s; }
+.word:nth-child(3) { animation-delay: 13.8s, 0s; }
+.word:nth-child(4) { animation-delay: 14.4s, 0s; }
+.word:nth-child(5) { animation-delay: 15.0s, 0s; }
+
+
+
 .salam-container {
     text-align: center;
     direction: rtl;
     padding: 20px 5px;
-    margin: 4vh 0;
+    margin: 0vh 0 0vh 0;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
 }
 
@@ -194,7 +269,7 @@ body {
     text-align: center;
     width: 95%;
     max-width: 800px;
-    margin: 4vh auto 8vh auto;
+    margin: 0vh auto 8vh auto;
 }
 
 .text-3d-only {
@@ -395,7 +470,7 @@ body {
     font-weight: 900;
     margin: 8px 0;
     animation: messageColorFloat 3s ease-in-out infinite;
-    text-shadow: 0 2px 0 #fff, 0 5px 7px rgba(0,0,0,0.55);
+    text-shadow: 0 5px 0 #fff, 0 5px 7px rgba(0,0,0,0.55);
     padding: 0 6px;
 }
 
@@ -677,8 +752,131 @@ body {
     pointer-events: none;
 }
 
-/* ========== MOBILE FIX - BOX BADA + TEXT NAHI LAGEGA + BUTTON SPACE FIX ========== */
+/* EID INFO POPUP */
+.eid-info-popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10005;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.eid-info-box {
+    background: linear-gradient(145deg, #112240, #0a192f);
+    border: 4px solid transparent;
+    border-image: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff) 1;
+    border-radius: 20px;
+    padding: 70px 20px;
+    max-width: 600px;
+    width: 92%;
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+    animation: popScale3D 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+}
+
+.close-eid-info {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 2rem;
+    color: #00ff88;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 0.3s;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-eid-info:hover {
+    color: #ff0040;
+    transform: rotate(90deg);
+}
+
+.eid-info-box h2 {
+    text-align: center;
+    font-size: clamp(1.3rem, 6vw, 2.5rem);
+    background: linear-gradient(45deg, #ff0040, #ff8000, #ffee00, #00ff40, #00e5ff, #2b65ff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 8s linear infinite;
+    margin-bottom: 18px;
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+.eid-info-content {
+    color: #fff;
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.eid-info-content p {
+    margin-bottom: 14px;
+}
+
+.eid-info-content ul {
+    margin: 14px 0 14px 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.eid-info-content ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.eid-info-content ul li::before {
+    content: '🌙';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.eid-dua {
+    text-align: center;
+    margin-top: 20px;
+    padding: 14px;
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 12px;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+}
+
+/* MOBILE FIX */
 @media (max-width: 600px) {
+    .mode-box {
+        top: 30px !important;
+        right: 12px !important;
+        padding: 6px 12px !important;
+    }
+    
+    .animated-heading {
+        margin-top: 12vh !important;
+    }
+    
+    .salam-container {
+        margin: 5vh 0 3vh 0 !important;
+    }
+    
+    .content-love {
+        margin: 5vh auto 6vh auto !important;
+    }
+    
     .social-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -688,12 +886,11 @@ body {
         text-align: center;
     }
     
-    /* BOX THODA BADA KIYA */
     .eid-stack-container {
-        width: 88% !important; /* 78% se 88% kiya */
+        width: 88% !important;
         max-width: 430px !important;
         margin: 0 auto;
-        transform: scale(0.94); /* Thoda bada kiya */
+        transform: scale(0.94);
         transform-origin: center;
     }
     
@@ -703,9 +900,8 @@ body {
         border: 4px solid #ff0000 !important;
     }
     
-    /* PADDING BADHAI TAKE TEXT SIDE NA LAGE */
     .eid-main-box {
-        padding: 24px 14px 52px 14px !important; /* Left-right 8px se 14px kiya */
+        padding: 24px 14px 52px 14px !important;
         border: 4px solid #ff9800 !important;
         border-top: none !important;
         border-radius: 0 0 30px 30px !important;
@@ -731,25 +927,22 @@ body {
         font-size: clamp(1.25rem, 5.2vw, 2.3rem) !important;
     }
     
-    /* TEXT SIDE SE THODA ANDAR */
     .eid-message {
         font-size: clamp(0.7rem, 2.5vw, 1.15rem) !important;
         line-height: 1.55 !important;
         margin: 9px 0 !important;
-        padding: 0 10px !important; /* 6px se 10px kiya */
+        padding: 0 10px !important;
     }
     
-    /* FOOTER KA MARGIN KAM KIYA TAKE BUTTONS KE UPAR SPACE NA HO */
     .eid-footer {
         font-size: clamp(0.8rem, 3.2vw, 1.35rem) !important;
-        margin: 7px 0 38px 0 !important; /* 45px se 38px kiya */
+        margin: 7px 0 38px 0 !important;
         padding: 0 10px 0 10px !important;
     }
     
-    /* BUTTONS KO THODA UPAR KIYA */
     .back-btn, .NAME-btn {
         position: absolute !important;
-        bottom: 10px !important; /* 8px se 10px kiya */
+        bottom: 10px !important;
         width: auto !important;
         padding: clamp(7px, 2.3vw, 10px) clamp(12px, 3.3vw, 18px) !important;
         font-size: clamp(0.7rem, 2.4vw, 0.9rem) !important;
@@ -767,14 +960,85 @@ body {
     #salamPage {
         padding: 18px !important;
     }
+    
+    .eid-info-popup {
+        padding: 10px !important;
+    }
+    
+    .eid-info-box {
+        width: 95% !important;
+        padding: 22px 16px !important;
+        border-radius: 18px !important;
+        max-height: 90vh !important;
+    }
+    
+    .close-eid-info {
+        top: 6px !important;
+        right: 12px !important;
+        font-size: 1.8rem !important;
+    }
+}
+
+
+.section-card {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 255, 136, 0.05) 100%);
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    border-radius: 16px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.15);
+    transition: 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 255, 136, 0.25);
+    border-color: rgba(0, 255, 136, 0.6);
+}
+
+.section-card h3 {
+    color: #00ff88;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    font-weight: 900;
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.section-card ul {
+    margin: 0;
+    padding-left: 25px;
+    list-style: none;
+}
+
+.section-card ul li {
+    color: #f5f5f5;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.section-card ul li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.8));
+}
+
+.section-card ul li b {
+    color: #00d4ff;
+    font-weight: 800;
 }
 </style>
-
 </head>
 <body>
 <div id="particles-bg"></div>
 <div class="sky-bg"></div>
-<div class="mode-box">EID MUBARAK</div>
+<button class="mode-box" id="eidInfoBtn">EID MUBARAK</button>
 
 <div id="mainPage">
     <div class="wrapper">
@@ -783,7 +1047,7 @@ body {
                 <span>A</span><span>s</span><span>s</span><span>a</span><span>l</span><span>a</span><span>m</span><span>u</span><span>a</span><span>l</span><span>a</span><span>i</span><span>k</span><span>u</span><span>m</span>
             </div>
             <div class="line">
-                <span>W</span><span>a</span><span>r</span><span>a</span><span>h</span><span>m</span><span>a</span><span>t</span><span>u</span><span>l</span><span>l</span><span>a</span><span>h</span><span>i</span>
+                <span>W</span><span>a</span><span>r</span><span>a</span><span>h</span><span>m</span><span>a</span><span>t</span><span>u</span><span>l</span><span>l</span><span>l</span><span>a</span><span>h</span><span>i</span>
             </div>
             <div class="line">
                 <span>W</span><span>a</span><span>b</span><span>a</span><span>r</span><span>a</span><span>k</span><span>a</span><span>t</span><span>u</span><span>h</span>
@@ -873,21 +1137,70 @@ body {
                     <li>Fully Responsive Mobile Design</li>
                 </ul>
             </div>
-            <div class="social-container">
-                <div class="social-box" onclick="window.open('https://www.instagram.com/md_afzal_officia_007', '_blank')">
-                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
-                    <div class="social-name">Instagram</div>
+
+             <div class="section-card">
+                    <h3>Development Process</h3>
+                    <ul>
+                        <li><b>HTML Structure:</b> Semantic markup with modern elements</li>
+                        <li><b>CSS Styling:</b> Advanced animations, gradients, and glassmorphism effects</li>
+                        <li><b>JavaScript Logic:</b> Interactive elements and particle systems</li>
+                        <li><b>Responsive Design:</b> Mobile-first approach with media queries</li>
+                        <li><b>UI/UX Design:</b> Dark theme with neon accent colors</li>
+                    </ul>
                 </div>
-                <div class="social-box" onclick="window.open('https://github.com/MdAfzal7767', '_blank')">
-                    <div class="social-icon"><i class="fab fa-github"></i></div>
-                    <div class="social-name">GitHub</div>
+                  <div class="social-section">
+                    <div class="social-title">Connect With Me</div>
+                    <div class="social-container">
+                        <div class="social-box instagram" onclick="window.open('//www.instagram.com/md_afzal_officia_007?utm_source=qr&igsh=MXYzcXE3NzJ2Z25vdg==', '_blank')">
+                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="social-name">Instagram</div>
+                        </div>
+                        <div class="social-box youtube" onclick="window.open('//youtube.com/@afzalgaming7260?si=PWNn1pQBFN47CZ1J', '_blank')">
+                            <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                            <div class="social-name">YouTube</div>
+                        </div>
+                        <div class="social-box facebook" onclick="window.open('//www.facebook.com/share/1EXLxjL4J2/', '_blank')">
+                            <div class="social-icon"><i class="fab fa-facebook"></i></div>
+                            <div class="social-name">Facebook</div>
+                        </div>
+                        <div class="social-box github" onclick="window.open('//github.com/MdAfzal7767', '_blank')">
+                            <div class="social-icon"><i class="fab fa-github"></i></div>
+                            <div class="social-name">GitHub</div>
+                        </div>
+                        <div class="social-box linkedin" onclick="window.open('//www.linkedin.com/in/md-afzal-4352883bb?utm_source=share_via&utm_content=profile&utm_medium=member_android', '_blank')">
+                            <div class="social-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="social-name">LinkedIn</div>
+                        </div>
+                        <div class="social-box">
+                            <button class="popup-back-btn" id="popupBackBtn">
+                                <span class="arrow">⇦</span>
+                                BACK
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="social-box" id="popupBackBtn">
-                    <div class="social-icon">⇦</div>
-                    <div class="social-name">BACK</div>
-                </div>
-            </div>
             <p class="thanks">Developed with ❤️ by MD AFZAL<br>Eid Mubarak 🤍🕊️</p>
+        </div>
+    </div>
+</div>
+
+<!-- EID INFO POPUP -->
+<div class="eid-info-popup" id="eidInfoPopup">
+    <div class="eid-info-box">
+        <span class="close-eid-info" id="closeEidInfo">&times;</span>
+        <h2>🌙 Eid Mubarak 🌙</h2>
+        <div class="eid-info-content">
+            <p><b>Eid-al-Adha</b> ko "Bakrid" bhi kehte hain. Ye Islam ka ek bada tyohar hai jo Hazrat Ibrahim (A.S) ki Allah ke liye qurbani ki yaad me manaya jata hai.</p>
+            
+            <p>Is din Musalman log:</p>
+            <ul>
+                <li>Subah Eid ki namaz padhte hain</li>
+                <li>Allah ke naam par janwar ki qurbani karte hain</li>
+                <li>Gharibon aur rishtedaron me gosht baantte hain</li>
+                <li>Naye kapde pehente hain aur ek dusre ko "Eid Mubarak" kehte hain</li>
+            </ul>
+            
+            <p class="eid-dua">Allah aapki qurbani aur duaon ko qubool farmaye. Aapke ghar me hamesha khushi, barkat aur aman rahe. <b>Eid Mubarak! 🤍🕊️</b></p>
         </div>
     </div>
 </div>
@@ -985,6 +1298,27 @@ popupBackBtn.addEventListener('click', closeAboutPopup);
 aboutPopup.addEventListener('click', function(e) {
     if(e.target === aboutPopup) {
         closeAboutPopup();
+    }
+});
+
+// EID INFO POPUP LOGIC
+const eidInfoBtn = document.getElementById('eidInfoBtn');
+const eidInfoPopup = document.getElementById('eidInfoPopup');
+const closeEidInfo = document.getElementById('closeEidInfo');
+
+eidInfoBtn.addEventListener('click', function() {
+    eidInfoPopup.style.display = 'flex';
+});
+
+function closeEidPopup() {
+    eidInfoPopup.style.display = 'none';
+}
+
+closeEidInfo.addEventListener('click', closeEidPopup);
+
+eidInfoPopup.addEventListener('click', function(e) {
+    if(e.target === eidInfoPopup) {
+        closeEidPopup();
     }
 });
 
