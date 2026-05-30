@@ -1042,53 +1042,82 @@ body {
 }
 
 
-/* DESKTOP - waisa hi rahega */
-.CREATE-Bte {
-    background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
-    color: #122ba6;
-    font-weight: 900;
-    font-size: 0.85rem;
-    padding: 12px 24px;
-    border: 5px solid #8bc378;
-    border-radius: 30px;
-    box-shadow: 0 8px 25px rgba(96, 229, 202, 0.6);
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: 3%;
-    margin-top: -50px;
-    text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
-    --base-y: 40px;
-    transform: translateY(var(--base-y));
-    animation: uparNicheHilna 2s ease-in-out infinite;
-}
-
-/* MOBILE FIX - Screenshot jaisa overlap hatane ke liye */
+/* MOBILE ONLY - 600px se niche screen */
 @media (max-width: 600px) {
-    .CREATE-Bte {
-        font-size: 0.7rem; /* Chhota font */
-        padding: 8px 16px; /* Chhota padding */
-        border: 3px solid #8bc378; /* Patla border */
-        margin-top: -20px; /* Kam upar */
-        margin-right: 8%; /* Right me halka shift */
-        --base-y: 15px; /* Kam niche shift */
-        max-width: 55%; /* Zyada lamba na ho */
-        box-shadow: 0 4px 15px rgba(96, 229, 202, 0.5);
+    
+    /* Eid box ko relative banao taaki button absolute ho sake */
+    .eid-main-box, .eid-stack-container {
+        position: relative;
+        padding-bottom: 0 !important;
     }
     
-    @keyframes uparNicheHilna {
-        0%, 100% { transform: translateY(var(--base-y)); }
-        50% { transform: translateY(calc(var(--base-y) - 3px)); } /* Sirf 3px hilega */
+    /* Last text ke niche jagah banao taaki button ke upar na chadhe */
+    .eid-message:last-of-type,
+    .eid-footer {
+        margin-bottom: 55px !important;
+        padding-bottom: 0 !important;
+    }
+    
+    /* Back button - left bottom */
+    .back-btn {
+        position: absolute !important;
+        bottom: 8px !important;
+        left: 4% !important;
+        padding: 8px 14px !important;
+        font-size: 0.72rem !important;
+        border-radius: 22px !important;
+        margin: 0 !important;
+        transform: none !important;
+        z-index: 10;
+    }
+    
+    /* CREATE BY: MD AFZAL button - right bottom */
+    .CREATE-Bte {
+        position: absolute !important;
+        bottom: 8px !important; /* Back ke barabar niche */
+        right: 4% !important; /* Right me pura chipka */
+        left: auto !important;
+        
+        /* Purana margin/transform/animation sab hatao */
+        margin: 0 !important;
+        margin-top: 0 !important;
+        transform: none !important;
+        animation: none !important;
+        
+        /* Button style chhota kiya */
+        background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%) !important;
+        color: #122ba6 !important;
+        font-weight: 900 !important;
+        font-size: 0.68rem !important;
+        padding: 8px 14px !important;
+        border: 2px solid #8bc378 !important;
+        border-radius: 22px !important;
+        box-shadow: 0 3px 10px rgba(96, 229, 202, 0.4) !important;
+        cursor: pointer !important;
+        display: inline-block !important;
+        text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3) !important;
+        white-space: nowrap !important;
+        max-width: 54% !important;
+        line-height: 1.25 !important;
+        z-index: 10;
     }
 }
 
-/* Bahut chhoti screen 360px se kam */
+/* Bahut chhoti screen 360px */
 @media (max-width: 360px) {
+    .back-btn {
+        bottom: 6px !important;
+        left: 3% !important;
+        padding: 7px 12px !important;
+        font-size: 0.68rem !important;
+    }
+    
     .CREATE-Bte {
-        font-size: 0.65rem;
-        padding: 7px 14px;
-        margin-right: 5%;
-        max-width: 50%;
+        bottom: 6px !important;
+        right: 3% !important;
+        padding: 7px 12px !important;
+        font-size: 0.65rem !important;
+        max-width: 52% !important;
     }
 }
 
