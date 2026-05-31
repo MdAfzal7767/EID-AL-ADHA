@@ -45,7 +45,6 @@ body {
     transition: 0.3s ease;
 }
 
-
 .mode-box:hover {
     transform: scale(1.1);
     box-shadow: 0 0 35px rgba(0, 255, 136, 1);
@@ -53,12 +52,11 @@ body {
 
 @media (max-width: 600px) {
     .mode-box {
-        top: 140px !important;   /* 30px se 140px */
-        left: 12px !important;   /* left side */
+        top: 140px !important;
+        left: 12px !important;
         right: auto !important;
         padding: 6px 12px !important;
     }
-
 }   
     
 .falling-moon, .falling-star, .rising-snow, .bg-star {
@@ -152,9 +150,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* animation: letterRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-               gradientFlow 14s linear infinite; */
-      animation: 
+    animation: 
         letterRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
         gradientFlow 14s linear infinite,
         premiumWave 4s ease-in-out infinite;
@@ -170,7 +166,7 @@ body {
     100% { background-position: 300% 50%; }
 }
 
-/* Line 1: Assalamualaikum */
+/* Line delays same as before */
 .animated-heading .line:nth-child(1) span:nth-child(1) { animation-delay: 0.3s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(2) { animation-delay: 0.6s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(3) { animation-delay: 0.9s, 0s; }
@@ -187,7 +183,6 @@ body {
 .animated-heading .line:nth-child(1) span:nth-child(14) { animation-delay: 4.2s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(15) { animation-delay: 4.5s, 0s; }
 
-/* Line 2: Warahmatullahi */
 .animated-heading .line:nth-child(2) span:nth-child(1) { animation-delay: 4.8s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(2) { animation-delay: 5.1s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(3) { animation-delay: 5.4s, 0s; }
@@ -204,7 +199,6 @@ body {
 .animated-heading .line:nth-child(2) span:nth-child(14) { animation-delay: 8.7s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(15) { animation-delay: 8.7s, 0s; }
 
-/* Line 3: Wabarakatuh */
 .animated-heading .line:nth-child(3) span:nth-child(1) { animation-delay: 9.0s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(2) { animation-delay: 9.3s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(3) { animation-delay: 9.6s, 0s; }
@@ -217,14 +211,11 @@ body {
 .animated-heading .line:nth-child(3) span:nth-child(10) { animation-delay: 11.7s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(11) { animation-delay: 12.0s, 0s; }
 
-/* Urdu - English khatam hone ke baad */
 .word:nth-child(1) { animation-delay: 12.6s, 0s; }
 .word:nth-child(2) { animation-delay: 13.2s, 0s; }
 .word:nth-child(3) { animation-delay: 13.8s, 0s; }
 .word:nth-child(4) { animation-delay: 14.4s, 0s; }
 .word:nth-child(5) { animation-delay: 15.0s, 0s; }
-
-
 
 .salam-container {
     text-align: center;
@@ -326,16 +317,6 @@ body {
     filter: blur(10px);
     animation: glowing 15s linear infinite;
 }
-
-/* .greeting-btn::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(255,255,255,0.95);
-    border-radius: 15px;
-    z-index: 2;
-} */
 
 .greeting-btn:hover {
     transform: scale(1.1) translateY(-5px);
@@ -517,27 +498,6 @@ body {
     background: #039412;
     box-shadow: 0 0 75px rgb(45, 45, 43);
     transform: scale(1.15);
-}
-
-/* .NAM-btn {
-    right: 3%;
-    background: linear-gradient(135deg, #FFD700 0%, #FF6B00 25%, #FFD700 50%, #FFA500 75%, #FFD700 100%);
-    background-size: 300% 100%;
-    color: #000;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 8px 35px rgba(255, 215, 0, 0.6);
-    animation: liquidGold 4s linear infinite, floatUp 3s ease-in-out infinite;
-} */
-
-@keyframes liquidGold {
-    0% { background-position: 0% 0; }
-    100% { background-position: 300% 0; }
-}
-
-@keyframes floatUp {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-6px) scale(1.02); }
 }
 
 .about-popup {
@@ -847,6 +807,8 @@ body {
     padding-left: 28px;
 }
 
+
+    /* EID INFO CONTENT CONTINUED */
 .eid-info-content ul li::before {
     content: '🌙';
     position: absolute;
@@ -864,7 +826,7 @@ body {
     font-size: clamp(0.9rem, 3.5vw, 1.2rem);
 }
 
-/* MOBILE FIX */
+/* MOBILE OPEN FUNCTION */
 @media (max-width: 600px) {
     .mode-box {
         top: 30px !important;
@@ -893,6 +855,7 @@ body {
         text-align: center;
     }
     
+    /* MOBILE COLLAPSE FUNCTION */
     .eid-stack-container {
         width: 88% !important;
         max-width: 430px !important;
@@ -901,17 +864,40 @@ body {
         transform-origin: center;
     }
     
+    .eid-main-box {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 14px !important;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+        border: 4px solid #ff9800 !important;
+        border-top: none !important;
+    }
+    
+    .eid-main-box.open {
+        max-height: 1500px;
+        padding: 24px 14px 52px 14px !important;
+    }
+    
+    .mobile-open-btn {
+        display: block !important;
+        position: relative;
+        margin: 15px auto 0 auto;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
+        color: #fff;
+        border: 3px solid #8bc378;
+        border-radius: 25px;
+        font-weight: 900;
+        font-size: 0.9rem;
+        cursor: pointer;
+        box-shadow: 0 5px 20px rgba(96, 229, 202, 0.5);
+        z-index: 10;
+    }
+    
     .top-blue-box {
         height: clamp(52px, 8.5vw, 75px) !important;
         font-size: clamp(1.25rem, 4.5vw, 2.6rem) !important;
         border: 4px solid #ff0000 !important;
-    }
-    
-    .eid-main-box {
-        padding: 24px 14px 52px 14px !important;
-        border: 4px solid #ff9800 !important;
-        border-top: none !important;
-        border-radius: 0 0 30px 30px !important;
     }
     
     .moon-icon {
@@ -986,6 +972,10 @@ body {
     }
 }
 
+/* DESKTOP ME OPEN BUTTON HIDE */
+.mobile-open-btn {
+    display: none;
+}
 
 .section-card {
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 255, 136, 0.05) 100%);
@@ -1041,86 +1031,30 @@ body {
     font-weight: 800;
 }
 
-
-/* MOBILE ONLY - 600px se niche screen */
-@media (max-width: 600px) {
-    
-    /* Eid box ko relative banao taaki button absolute ho sake */
-    .eid-main-box, .eid-stack-container {
-        position: relative;
-        padding-bottom: 0 !important;
-    }
-    
-    /* Last text ke niche jagah banao taaki button ke upar na chadhe */
-    .eid-message:last-of-type,
-    .eid-footer {
-        margin-bottom: 55px !important;
-        padding-bottom: 0 !important;
-    }
-    
-    /* Back button - left bottom */
-    .back-btn {
-        position: absolute !important;
-        bottom: 8px !important;
-        left: 4% !important;
-        padding: 8px 14px !important;
-        font-size: 0.72rem !important;
-        border-radius: 22px !important;
-        margin: 0 !important;
-        transform: none !important;
-        z-index: 10;
-    }
-    
-    /* CREATE BY: MD AFZAL button - right bottom */
-    .CREATE-Bte {
-        position: absolute !important;
-        bottom: 8px !important; /* Back ke barabar niche */
-        right: 4% !important; /* Right me pura chipka */
-        left: auto !important;
-        
-        /* Purana margin/transform/animation sab hatao */
-        margin: 0 !important;
-        margin-top: 0 !important;
-        transform: none !important;
-        animation: none !important;
-        
-        /* Button style chhota kiya */
-        background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%) !important;
-        color: #122ba6 !important;
-        font-weight: 900 !important;
-        font-size: 0.68rem !important;
-        padding: 8px 14px !important;
-        border: 2px solid #8bc378 !important;
-        border-radius: 22px !important;
-        box-shadow: 0 3px 10px rgba(96, 229, 202, 0.4) !important;
-        cursor: pointer !important;
-        display: inline-block !important;
-        text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3) !important;
-        white-space: nowrap !important;
-        max-width: 54% !important;
-        line-height: 1.25 !important;
-        z-index: 10;
-    }
+.CREATE-Bte {
+    background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
+    color: #122ba6;
+    font-weight: 900;
+    font-size: 0.85rem;
+    padding: 12px 24px;
+    border: 5px solid #8bc378;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(96, 229, 202, 0.6);
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: 3%;
+    margin-top: 0;
+    text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
+    margin-top: -50px;
+    transform: translateY(40px);
+    animation: uparNicheHilna 2s ease-in-out infinite;
 }
 
-/* Bahut chhoti screen 360px */
-@media (max-width: 360px) {
-    .back-btn {
-        bottom: 6px !important;
-        left: 3% !important;
-        padding: 7px 12px !important;
-        font-size: 0.68rem !important;
-    }
-    
-    .CREATE-Bte {
-        bottom: 6px !important;
-        right: 3% !important;
-        padding: 7px 12px !important;
-        font-size: 0.65rem !important;
-        max-width: 52% !important;
-    }
+@keyframes uparNicheHilna {
+    0%, 100% { transform: translateY(40px); }
+    50% { transform: translateY(32px); }
 }
-
 </style>
 </head>
 <body>
@@ -1162,7 +1096,7 @@ body {
         <div class="top-blue-box">
             <span>🕌</span><span>🕋</span><span>🤲</span>
         </div>
-        <div class="eid-main-box">
+        <div class="eid-main-box" id="eidCard">
             <div class="moon-icon">🌙</div>
             <h1 class="eid-heading">Eid-al-Adha Mubarak</h1>
             <div class="animals-container">
@@ -1183,6 +1117,9 @@ body {
             <button class="CREATE-Bte" id="afzalBtn">CREATE BY: MD AFZAL</button>
             <button class="back-btn" id="backBtn">← Back</button>
         </div>
+        <button class="mobile-open-btn" onclick="document.getElementById('eidCard').classList.toggle('open')">
+            🎁 Card Open Karo
+        </button>
     </div>
 </div>
 
@@ -1239,23 +1176,23 @@ body {
                   <div class="social-section">
                     <div class="social-title">Connect With Me</div>
                     <div class="social-container">
-                        <div class="social-box instagram" onclick="window.open('//www.instagram.com/md_afzal_officia_007?utm_source=qr&igsh=MXYzcXE3NzJ2Z25vdg==', '_blank')">
+                        <div class="social-box instagram" onclick="window.open('https://www.instagram.com/md_afzal_officia_007?utm_source=qr&igsh=MXYzcXE3NzJ2Z25vdg==', '_blank')">
                             <div class="social-icon"><i class="fab fa-instagram"></i></div>
                             <div class="social-name">Instagram</div>
                         </div>
-                        <div class="social-box youtube" onclick="window.open('//youtube.com/@afzalgaming7260?si=PWNn1pQBFN47CZ1J', '_blank')">
+                        <div class="social-box youtube" onclick="window.open('https://youtube.com/@afzalgaming7260?si=PWNn1pQBFN47CZ1J', '_blank')">
                             <div class="social-icon"><i class="fab fa-youtube"></i></div>
                             <div class="social-name">YouTube</div>
                         </div>
-                        <div class="social-box facebook" onclick="window.open('//www.facebook.com/share/1EXLxjL4J2/', '_blank')">
+                        <div class="social-box facebook" onclick="window.open('https://www.facebook.com/share/1EXLxjL4J2/', '_blank')">
                             <div class="social-icon"><i class="fab fa-facebook"></i></div>
                             <div class="social-name">Facebook</div>
                         </div>
-                        <div class="social-box github" onclick="window.open('//github.com/MdAfzal7767', '_blank')">
+                        <div class="social-box github" onclick="window.open('https://github.com/MdAfzal7767', '_blank')">
                             <div class="social-icon"><i class="fab fa-github"></i></div>
                             <div class="social-name">GitHub</div>
                         </div>
-                        <div class="social-box linkedin" onclick="window.open('//www.linkedin.com/in/md-afzal-4352883bb?utm_source=share_via&utm_content=profile&utm_medium=member_android', '_blank')">
+                        <div class="social-box linkedin" onclick="window.open('https://www.linkedin.com/in/md-afzal-4352883bb?utm_source=share_via&utm_content=profile&utm_medium=member_android', '_blank')">
                             <div class="social-icon"><i class="fab fa-linkedin"></i></div>
                             <div class="social-name">LinkedIn</div>
                         </div>
