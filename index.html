@@ -12,9 +12,17 @@ html, body { overflow-x: hidden; width: 100%; }
 
 body {
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+    min-height: 1vh;
     overflow-y: auto;
-    background: linear-gradient(180deg, #0a192f 0%, #071120 50%, #02060a 100%);
+   background: linear-gradient(
+    2deg, 
+    #1f60c1 0%,      /* blue */
+    #021ab2 20%,     /* cyan */
+    #c66b09 40%,     /* green */
+    #ffeb3b 60%,     /* yellow */
+    #8012ac 80%,     /* purple */
+    #ff4081 100%     /* pink */
+) fixed;
     position: relative;
 }
 
@@ -22,7 +30,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 50% 30%, #112240 0%, #0a192f 40%, #020c1b 100%);
+    /* background: radial-gradient(ellipse at 50% 30%, #112240 0%, #0a192f 40%, #020c1b 100%); */
     z-index: 1;
 }
 
@@ -58,6 +66,18 @@ body {
     }
 }   
 
+.falling-moon {
+    position: fixed;
+    top: -100px;
+    animation: fallDown linear infinite;
+}
+
+@keyframes fallDown {
+    0% { transform: translateY(-100px) rotate(-25deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(110vh) rotate(-25deg); opacity: 0; }
+}
+
 .falling-moon, .falling-star, .rising-snow, .bg-star {
     position: absolute;
     pointer-events: none;
@@ -83,13 +103,13 @@ body {
     text-shadow: 0 0 25px rgba(255, 255, 255, 1);
     animation: starFall linear infinite;
 }
-.falling-star::before { content: '★'; }
+/* .falling-star::before { content: '★'; }
 
 @keyframes starFall {
     0% { transform: translateY(-100vh) scale(0.3); opacity: 0; }
     10% { opacity: 1; transform: translateY(-80vh) scale(1); }
     100% { transform: translateY(100vh) scale(0.3); opacity: 0; }
-}
+} */
 
 .rising-snow {
     background: white; border-radius: 50%;
@@ -164,7 +184,9 @@ body {
     100% { background-position: 300% 50%; }
 }
 
-    /* Line 1: Assalamualaikum */
+
+
+/* Line 1: Assalamualaikum */
 .animated-heading .line:nth-child(1) span:nth-child(1) { animation-delay: 0.3s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(2) { animation-delay: 0.6s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(3) { animation-delay: 0.9s, 0s; }
@@ -211,7 +233,6 @@ body {
 .animated-heading .line:nth-child(3) span:nth-child(10) { animation-delay: 11.7s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(11) { animation-delay: 12.0s, 0s; }
 
-
 .salam-container {
     text-align: center;
     direction: rtl;
@@ -256,7 +277,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 100px;
     text-align: center;
     width: 95%;
     max-width: 800px;
@@ -475,7 +496,7 @@ body {
     bottom: 20px;
     padding: 8px 15px;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: .75rem;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
@@ -495,7 +516,7 @@ body {
     background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
     color: #122ba6;
     font-weight: 900;
-    font-size: .45rem;
+    font-size: 0.75rem;
     padding: 10px 20px;
     border: 3px solid #8bc378;
     border-radius: 25px;
@@ -925,7 +946,7 @@ body {
     
     .eid-footer {
         font-size: clamp(0.8rem, 3.2vw, 1.35rem) !important;
-        margin: 7px 0 20px 0 !important;
+        margin: 10px 0 10px 0 !important;
         padding: 0 10px 0 10px !important;
     }
     
@@ -992,7 +1013,7 @@ body {
             <span>🕌</span><span>🕋</span><span>🤲</span>
         </div>
         <div class="eid-main-box" id="eidCard">
-            <div class="moon-icon">🌙</div>
+            <!-- <div class="moon-icon">🌙</div> -->
             <h1 class="eid-heading">Eid-al-Adha Mubarak</h1>
             <div class="animals-container">
                 <div class="animal">🐏</div>
@@ -1032,9 +1053,9 @@ body {
                     </div>
                     <div>
                         <div class="qr-box">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://github.com/MdAfzal7767" alt="QR">
+                            <img src="image.jpg" alt="QR">
                         </div>
-                        <div class="scan-text">Scan Me</div>
+                        <div class="scan-text">MADINA</div>
                     </div>
                 </div>
             </div>
@@ -1123,26 +1144,26 @@ body {
 </div>
 
 <script>
-function createMoon() {
-    const moon = document.createElement('div');
-    moon.className = 'falling-moon';
-    moon.innerHTML = `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="48" fill="white"/></svg>`;
-    moon.style.left = Math.random() * 95 + '%';
-    moon.style.animationDuration = (Math.random() * 5 + 15) + 's';
-    document.getElementById('particles-bg').appendChild(moon);
-    setTimeout(() => moon.remove(), 25000);
-}
-setInterval(createMoon, 2200);
+// function createMoon() {
+//     const moon = document.createElement('div');
+//     moon.className = 'falling-moon';
+//     moon.innerHTML = `<svg viewBox="0 0 100 100" width="100%" height="100%"><circle cx="50" cy="50" r="48" fill="white"/></svg>`;
+//     moon.style.left = Math.random() * 95 + '%';
+//     moon.style.animationDuration = (Math.random() * 5 + 15) + 's';
+//     document.getElementById('particles-bg').appendChild(moon);
+//     setTimeout(() => moon.remove(), 25000);
+// }
+// setInterval(createMoon, 2200);
 
-function createFallingStar() {
-    const star = document.createElement('div');
-    star.className = 'falling-star';
-    star.style.left = Math.random() * 100 + '%';
-    star.style.animationDuration = (Math.random() * 6 + 14) + 's';
-    document.getElementById('particles-bg').appendChild(star);
-    setTimeout(() => star.remove(), 25000);
-}
-setInterval(createFallingStar, 700);
+// function createFallingStar() {
+//     const star = document.createElement('div');
+//     star.className = 'falling-star';
+//     star.style.left = Math.random() * 100 + '%';
+//     star.style.animationDuration = (Math.random() * 6 + 14) + 's';
+//     document.getElementById('particles-bg').appendChild(star);
+//     setTimeout(() => star.remove(), 25000);
+// }
+// setInterval(createFallingStar, 700);
 
 function createRisingSnow() {
     const snow = document.createElement('div');
@@ -1257,6 +1278,115 @@ document.querySelectorAll('.section-card').forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
     });
 });
+
+document.body.style.background = "linear-gradient(180deg, #1f60c1, #3d8bff, #00d4ff, #00e676, #09c61f, #cddc39, #ffeb3b, #ff9800, #8012ac, #e91e63, #ff4081) fixed";
+
+function createMoon(tiltAngle = -25) {
+    const moon = document.createElement('div');
+    moon.classList.add('falling-moon');
+    moon.style.setProperty('--moon-tilt', tiltAngle + 'deg');
+    
+    const uniqueId = 'moonMask' + Date.now() + Math.random();
+    moon.innerHTML = `
+        <svg viewBox="0 0 100 100" width="45" height="45">
+            <defs>
+                <mask id="${uniqueId}">
+                    <circle cx="50" cy="50" r="48" fill="white"/>
+                    <circle cx="70" cy="50" r="45" fill="black"/>
+                </mask>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="white" mask="url(#${uniqueId})"/>
+        </svg>
+    `;
+    
+    moon.style.left = Math.random() * 95 + '%';
+    moon.style.animationDuration = (Math.random() * 5 + 15) + 's';
+    document.getElementById('particles-bg').appendChild(moon);
+    setTimeout(() => moon.remove(), 20000);
+}
+setInterval(createMoon, 2200);
+
+// ===== STAR CODE =====
+function createFallingStar() {
+    const star = document.createElement('div');
+    star.classList.add('falling-star');
+    star.textContent = '⭐';
+    const size = Math.random() * 20 + 22;
+    star.style.left = Math.random() * 100 + '%';
+    star.style.fontSize = size + 'px';
+    star.style.animationDuration = (Math.random() * 6 + 10) + 's';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    document.getElementById('particles-bg').appendChild(star);
+    setTimeout(() => star.remove(), 25000);
+}
+setInterval(createFallingStar, 700);
+
+// ===== SNOW CODE - AB NICHE GIREGA =====
+function createFallingSnow() {
+    const snow = document.createElement('div');
+    snow.classList.add('falling-snow');
+    snow.textContent = '❄️';
+    snow.style.left = Math.random() * 100 + '%';
+    snow.style.animationDelay = Math.random() * 5 + 's';
+    snow.style.animationDuration = (Math.random() * 5 + 8) + 's';
+    const size = Math.random() * 4 + 3;
+    snow.style.fontSize = size + 'px';
+    document.getElementById('particles-bg').appendChild(snow);
+    setTimeout(() => snow.remove(), 15000);
+}
+setInterval(createFallingSnow, 450);
+
+
+function createMoon() {
+    const moon = document.createElement('div');
+    moon.className = 'falling-moon';
+    
+    moon.innerHTML = `
+        <svg width="45" height="45" viewBox="0 0 100 100">
+            <defs>
+                <mask id="m${Date.now()}">
+                    <circle cx="50" cy="50" r="48" fill="white"/>
+                    <circle cx="70" cy="50" r="45" fill="black"/>
+                </mask>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="white" mask="url(#m${Date.now()})"/>
+        </svg>
+    `;
+    
+    moon.style.left = Math.random() * 95 + '%';
+    moon.style.animationDuration = (Math.random() * 5 + 15) + 's';
+    document.getElementById('bg').appendChild(moon);
+    setTimeout(() => moon.remove(), 20000);
+}
+
+setInterval(createMoon, 2200);
+
+function createMoon(tiltAngle = -25) {
+    const moon = document.createElement('div');
+    moon.classList.add('falling-moon');
+    moon.style.setProperty('--moon-tilt', tiltAngle + 'deg');
+    
+    const uniqueId = 'moonMask' + Date.now() + Math.random();
+    moon.innerHTML = `
+        <svg viewBox="0 0 100 100" width="45" height="45">
+            <defs>
+                <mask id="${uniqueId}">
+                    <circle cx="50" cy="50" r="48" fill="white"/>
+                    <circle cx="70" cy="50" r="45" fill="black"/>
+                </mask>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="white" mask="url(#${uniqueId})"/>
+        </svg>
+    `;
+    
+    moon.style.left = Math.random() * 95 + '%';
+    moon.style.animationDuration = (Math.random() * 5 + 15) + 's';
+    document.getElementById('particles-bg').appendChild(moon);
+    setTimeout(() => moon.remove(), 20000);
+}
+
+// Har 2.2 second me ek naya chand girega
+setInterval(createMoon, 2200);
 </script>
 </body>
 </html>
