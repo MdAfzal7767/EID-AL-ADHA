@@ -26,7 +26,6 @@ body {
     z-index: 1;
 }
 
-/* EID MUBARAK BUTTON */
 .mode-box {
     position: fixed !important;
     top: 200px !important;
@@ -58,7 +57,7 @@ body {
         padding: 6px 12px !important;
     }
 }   
-    
+
 .falling-moon, .falling-star, .rising-snow, .bg-star {
     position: absolute;
     pointer-events: none;
@@ -152,8 +151,7 @@ body {
     background-clip: text;
     animation: 
         letterRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-        gradientFlow 14s linear infinite,
-        premiumWave 4s ease-in-out infinite;
+        gradientFlow 14s linear infinite;
 }
 
 @keyframes letterRight {
@@ -166,7 +164,7 @@ body {
     100% { background-position: 300% 50%; }
 }
 
-/* Line delays same as before */
+    /* Line 1: Assalamualaikum */
 .animated-heading .line:nth-child(1) span:nth-child(1) { animation-delay: 0.3s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(2) { animation-delay: 0.6s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(3) { animation-delay: 0.9s, 0s; }
@@ -183,6 +181,7 @@ body {
 .animated-heading .line:nth-child(1) span:nth-child(14) { animation-delay: 4.2s, 0s; }
 .animated-heading .line:nth-child(1) span:nth-child(15) { animation-delay: 4.5s, 0s; }
 
+/* Line 2: Warahmatullahi */
 .animated-heading .line:nth-child(2) span:nth-child(1) { animation-delay: 4.8s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(2) { animation-delay: 5.1s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(3) { animation-delay: 5.4s, 0s; }
@@ -199,6 +198,7 @@ body {
 .animated-heading .line:nth-child(2) span:nth-child(14) { animation-delay: 8.7s, 0s; }
 .animated-heading .line:nth-child(2) span:nth-child(15) { animation-delay: 8.7s, 0s; }
 
+/* Line 3: Wabarakatuh */
 .animated-heading .line:nth-child(3) span:nth-child(1) { animation-delay: 9.0s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(2) { animation-delay: 9.3s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(3) { animation-delay: 9.6s, 0s; }
@@ -211,11 +211,6 @@ body {
 .animated-heading .line:nth-child(3) span:nth-child(10) { animation-delay: 11.7s, 0s; }
 .animated-heading .line:nth-child(3) span:nth-child(11) { animation-delay: 12.0s, 0s; }
 
-.word:nth-child(1) { animation-delay: 12.6s, 0s; }
-.word:nth-child(2) { animation-delay: 13.2s, 0s; }
-.word:nth-child(3) { animation-delay: 13.8s, 0s; }
-.word:nth-child(4) { animation-delay: 14.4s, 0s; }
-.word:nth-child(5) { animation-delay: 15.0s, 0s; }
 
 .salam-container {
     text-align: center;
@@ -362,11 +357,11 @@ body {
 }
 
 .eid-main-box {
-    position: relative;
+    position: relative; /* IMPORTANT: iske andar absolute button fix hoga */
     width: 100%;
     background: linear-gradient(145deg, #42a5f5, #4ee955, #a75ed7, #a4801d, #0f84dd);
     border-radius: 0 0 30px 30px;
-    padding: 18px 8px 60px 8px;
+    padding: 18px 8px 70px 8px; /* niche 70px space button ke liye */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -474,21 +469,16 @@ body {
     100% { color: #011b41; transform: translateY(0px); }
 }
 
-.back-btn, .NAME-btn {
+.back-btn {
     position: absolute;
-    margin-top: -15px;
+    left: 6%;
     bottom: 20px;
-    padding: clamp(5px, 1.8vw, 8px) clamp(8px, 2.5vw, 15px);
+    padding: 8px 15px;
     font-weight: 900;
-    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    font-size: 1.2rem;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.back-btn {
-    left: 6%;
-    font-size: 1.2rem;
     background: rgba(124, 221, 143, 0.5);
     color: #000;
     border: 5px solid #9bd47a;
@@ -498,6 +488,30 @@ body {
     background: #039412;
     box-shadow: 0 0 75px rgb(45, 45, 43);
     transform: scale(1.15);
+}
+
+/* FIXED CREATE BUTTON - LAPTOP + MOBILE SAME POSITION */
+.CREATE-Bte {
+    background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
+    color: #122ba6;
+    font-weight: 900;
+    font-size: 0.75rem;
+    padding: 10px 20px;
+    border: 3px solid #8bc378;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px rgba(96, 229, 202, 0.6);
+    cursor: pointer;
+    position: absolute; /* eid-main-box ke andar fix */
+    right: 6%;
+    bottom: 20px; /* back button ke barabar */
+    text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
+    animation: uparNicheHilna 2s ease-in-out infinite;
+    white-space: nowrap;
+}
+
+@keyframes uparNicheHilna {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
 }
 
 .about-popup {
@@ -719,7 +733,6 @@ body {
     pointer-events: none;
 }
 
-/* EID INFO POPUP */
 .eid-info-popup {
     display: none;
     position: fixed;
@@ -807,8 +820,6 @@ body {
     padding-left: 28px;
 }
 
-
-    /* EID INFO CONTENT CONTINUED */
 .eid-info-content ul li::before {
     content: '🌙';
     position: absolute;
@@ -826,7 +837,7 @@ body {
     font-size: clamp(0.9rem, 3.5vw, 1.2rem);
 }
 
-/* MOBILE OPEN FUNCTION */
+/* MOBILE FIX - BUTTON HILNA BAND */
 @media (max-width: 600px) {
     .mode-box {
         top: 30px !important;
@@ -855,7 +866,6 @@ body {
         text-align: center;
     }
     
-    /* MOBILE COLLAPSE FUNCTION */
     .eid-stack-container {
         width: 88% !important;
         max-width: 430px !important;
@@ -865,39 +875,25 @@ body {
     }
     
     .eid-main-box {
-        max-height: 0;
-        overflow: hidden;
-        padding: 0 14px !important;
-        transition: max-height 0.5s ease, padding 0.5s ease;
+        padding: 24px 14px 65px 14px !important; /* niche space fixed */
         border: 4px solid #ff9800 !important;
         border-top: none !important;
+        border-radius: 0 0 30px 30px !important;
     }
     
-    .eid-main-box.open {
-        max-height: 1500px;
-        padding: 24px 14px 52px 14px !important;
+    /* MOBILE ME BHI SAME POSITION */
+    .CREATE-Bte {
+        font-size: 0.65rem;
+        padding: 8px 16px;
+        right: 3%;
+        bottom: 12px;
     }
     
-    .mobile-open-btn {
-        display: block !important;
-        position: relative;
-        margin: 15px auto 0 auto;
-        padding: 12px 25px;
-        background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
-        color: #fff;
-        border: 3px solid #8bc378;
-        border-radius: 25px;
-        font-weight: 900;
-        font-size: 0.9rem;
-        cursor: pointer;
-        box-shadow: 0 5px 20px rgba(96, 229, 202, 0.5);
-        z-index: 10;
-    }
-    
-    .top-blue-box {
-        height: clamp(52px, 8.5vw, 75px) !important;
-        font-size: clamp(1.25rem, 4.5vw, 2.6rem) !important;
-        border: 4px solid #ff0000 !important;
+    .back-btn {
+        left: 3%;
+        bottom: 12px;
+        font-size: 1rem;
+        padding: 7px 12px;
     }
     
     .moon-icon {
@@ -933,23 +929,6 @@ body {
         padding: 0 10px 0 10px !important;
     }
     
-    .back-btn, .NAME-btn {
-        position: absolute !important;
-        bottom: 10px !important;
-        width: auto !important;
-        padding: clamp(7px, 2.3vw, 10px) clamp(12px, 3.3vw, 18px) !important;
-        font-size: clamp(0.7rem, 2.4vw, 0.9rem) !important;
-        border-radius: 20px !important;
-    }
-    
-    .back-btn {
-        left: 3% !important;
-    }
-    
-    .NAME-btn {
-        right: 3% !important;
-    }
-    
     #salamPage {
         padding: 18px !important;
     }
@@ -971,104 +950,6 @@ body {
         font-size: 1.8rem !important;
     }
 }
-
-/* DESKTOP ME OPEN BUTTON HIDE */
-.mobile-open-btn {
-    display: none;
-}
-
-.section-card {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 255, 136, 0.05) 100%);
-    border: 2px solid rgba(0, 255, 136, 0.3);
-    border-radius: 16px;
-    padding: 20px 25px;
-    margin-bottom: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.15);
-    transition: 0.3s ease;
-}
-
-.section-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 255, 136, 0.25);
-    border-color: rgba(0, 255, 136, 0.6);
-}
-
-.section-card h3 {
-    color: #00ff88;
-    font-size: clamp(1.1rem, 4vw, 1.5rem);
-    font-weight: 900;
-    margin-bottom: 15px;
-    font-family: 'Orbitron', sans-serif;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
-}
-
-.section-card ul {
-    margin: 0;
-    padding-left: 25px;
-    list-style: none;
-}
-
-.section-card ul li {
-    color: #f5f5f5;
-    font-size: clamp(0.85rem, 3vw, 1rem);
-    line-height: 1.7;
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 25px;
-}
-
-.section-card ul li::before {
-    content: '✨';
-    position: absolute;
-    left: 0;
-    top: 0;
-    filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.8));
-}
-
-.section-card ul li b {
-    color: #00d4ff;
-    font-weight: 800;
-}
-
-
-.CREATE-Bte {
-    background: linear-gradient(135deg, #0a9818 0%, #FFA500 100%);
-    color: #122ba6;
-    font-weight: 900;
-    font-size: 0.7rem;  /* chhota kiya */
-    padding: 8px 18px;  /* padding kam kiya */
-    border: 3px solid #8bc378;  /* border patla kiya */
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(96, 229, 202, 0.5);
-    cursor: pointer;
-    position: absolute;  /* absolute karke right bottom me chipkaya */
-    right: 6%;
-    bottom: 22px;  /* back button ke barabar */
-    text-shadow: 0 1px 2px rgba(14, 147, 223, 0.3);
-    animation: uparNicheHilna 2s ease-in-out infinite;
-    white-space: nowrap;  /* text na tute */
-}
-
-@keyframes uparNicheHilna {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-3px); }
-}
-
-/* Mobile me bhi same position */
-@media (max-width: 600px) {
-    .CREATE-Bte {
-        font-size: 0.65rem;
-        padding: 7px 15px;
-        right: 3%;
-        bottom: 12px;
-    }
-    
-    .eid-main-box {
-        padding-bottom: 55px !important; /* niche space diya button ke liye */
-    }
-}
-    
 </style>
 </head>
 <body>
@@ -1086,7 +967,7 @@ body {
                 <span>W</span><span>a</span><span>r</span><span>a</span><span>h</span><span>m</span><span>a</span><span>t</span><span>u</span><span>l</span><span>l</span><span>l</span><span>a</span><span>h</span><span>i</span>
             </div>
             <div class="line">
-                <span>W</span><span>a</span><span>b</span><span>a</span><span>r</span><span>a</span><span>k</span><span>a</span><span>t</span><span>u</span><span>h</span>
+                <span>W</span><span>a</span><span>b</span><span>a</span><span>r                <span>a</span><span>r</span><span>a</span><span>k</span><span>a</span><span>t</span><span>u</span><span>h</span>
             </div>
         </h1>
 
@@ -1131,9 +1012,6 @@ body {
             <button class="CREATE-Bte" id="afzalBtn">CREATE BY: MD AFZAL</button>
             <button class="back-btn" id="backBtn">← Back</button>
         </div>
-        <button class="mobile-open-btn" onclick="document.getElementById('eidCard').classList.toggle('open')">
-            🎁 Card Open Karo
-        </button>
     </div>
 </div>
 
@@ -1177,47 +1055,47 @@ body {
                 </ul>
             </div>
 
-             <div class="section-card">
-                    <h3>Development Process</h3>
-                    <ul>
-                        <li><b>HTML Structure:</b> Semantic markup with modern elements</li>
-                        <li><b>CSS Styling:</b> Advanced animations, gradients, and glassmorphism effects</li>
-                        <li><b>JavaScript Logic:</b> Interactive elements and particle systems</li>
-                        <li><b>Responsive Design:</b> Mobile-first approach with media queries</li>
-                        <li><b>UI/UX Design:</b> Dark theme with neon accent colors</li>
-                    </ul>
-                </div>
-                  <div class="social-section">
-                    <div class="social-title">Connect With Me</div>
-                    <div class="social-container">
-                        <div class="social-box instagram" onclick="window.open('https://www.instagram.com/md_afzal_officia_007?utm_source=qr&igsh=MXYzcXE3NzJ2Z25vdg==', '_blank')">
-                            <div class="social-icon"><i class="fab fa-instagram"></i></div>
-                            <div class="social-name">Instagram</div>
-                        </div>
-                        <div class="social-box youtube" onclick="window.open('https://youtube.com/@afzalgaming7260?si=PWNn1pQBFN47CZ1J', '_blank')">
-                            <div class="social-icon"><i class="fab fa-youtube"></i></div>
-                            <div class="social-name">YouTube</div>
-                        </div>
-                        <div class="social-box facebook" onclick="window.open('https://www.facebook.com/share/1EXLxjL4J2/', '_blank')">
-                            <div class="social-icon"><i class="fab fa-facebook"></i></div>
-                            <div class="social-name">Facebook</div>
-                        </div>
-                        <div class="social-box github" onclick="window.open('https://github.com/MdAfzal7767', '_blank')">
-                            <div class="social-icon"><i class="fab fa-github"></i></div>
-                            <div class="social-name">GitHub</div>
-                        </div>
-                        <div class="social-box linkedin" onclick="window.open('https://www.linkedin.com/in/md-afzal-4352883bb?utm_source=share_via&utm_content=profile&utm_medium=member_android', '_blank')">
-                            <div class="social-icon"><i class="fab fa-linkedin"></i></div>
-                            <div class="social-name">LinkedIn</div>
-                        </div>
-                        <div class="social-box">
-                            <button class="popup-back-btn" id="popupBackBtn">
-                                <span class="arrow">⇦</span>
-                                BACK
-                            </button>
-                        </div>
+            <div class="section-card">
+                <h3>Development Process</h3>
+                <ul>
+                    <li><b>HTML Structure:</b> Semantic markup with modern elements</li>
+                    <li><b>CSS Styling:</b> Advanced animations, gradients, and glassmorphism effects</li>
+                    <li><b>JavaScript Logic:</b> Interactive elements and particle systems</li>
+                    <li><b>Responsive Design:</b> Mobile-first approach with media queries</li>
+                    <li><b>UI/UX Design:</b> Dark theme with neon accent colors</li>
+                </ul>
+            </div>
+            <div class="social-section">
+                <div class="social-title">Connect With Me</div>
+                <div class="social-container">
+                    <div class="social-box instagram" onclick="window.open('https://www.instagram.com/md_afzal_officia_007?utm_source=qr&igsh=MXYzcXE3NzJ2Z25vdg==', '_blank')">
+                        <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                        <div class="social-name">Instagram</div>
+                    </div>
+                    <div class="social-box youtube" onclick="window.open('https://youtube.com/@afzalgaming7260?si=PWNn1pQBFN47CZ1J', '_blank')">
+                        <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                        <div class="social-name">YouTube</div>
+                    </div>
+                    <div class="social-box facebook" onclick="window.open('https://www.facebook.com/share/1EXLxjL4J2/', '_blank')">
+                        <div class="social-icon"><i class="fab fa-facebook"></i></div>
+                        <div class="social-name">Facebook</div>
+                    </div>
+                    <div class="social-box github" onclick="window.open('https://github.com/MdAfzal7767', '_blank')">
+                        <div class="social-icon"><i class="fab fa-github"></i></div>
+                        <div class="social-name">GitHub</div>
+                    </div>
+                    <div class="social-box linkedin" onclick="window.open('https://www.linkedin.com/in/md-afzal-4352883bb?utm_source=share_via&utm_content=profile&utm_medium=member_android', '_blank')">
+                        <div class="social-icon"><i class="fab fa-linkedin"></i></div>
+                        <div class="social-name">LinkedIn</div>
+                    </div>
+                    <div class="social-box">
+                        <button class="popup-back-btn" id="popupBackBtn">
+                            <span class="arrow">⇦</span>
+                            BACK
+                        </button>
                     </div>
                 </div>
+            </div>
             <p class="thanks">Developed with ❤️ by MD AFZAL<br>Eid Mubarak 🤍🕊️</p>
         </div>
     </div>
